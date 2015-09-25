@@ -1,0 +1,26 @@
+<project default="usage" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <taskdef uri="antlib:com.salesforce" classpath="lib/salesforce_ant_34.0/ant-salesforce.jar" />
+    <property file="build.properties"/>
+    <property environment="env"/>
+    
+    <target name="retrieve" description="Deploys webhooks package from dev org">
+        <sf:retrieve
+            username="${de.username}"
+            password="${de.password}"
+            serverurl="${de.serverurl}"
+            retrieveTarget="src"
+            packageNames="Service Bus Webhooks"
+        />
+    </target>
+    
+    <target name="deploy" description="Deploys webhooks package to dev org">
+        <sf:deploy
+            username="${de.username}"
+            password="${de.password}"
+            serverurl="${de.serverurl}"
+            deployRoot="src"
+        />
+    </target>
+    
+</project>
