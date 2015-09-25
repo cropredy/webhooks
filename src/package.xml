@@ -6,6 +6,8 @@
     <types>
         <members>PostInstallHandler</members>
         <members>PostInstallHandlerTest</members>
+        <members>QueryStringConnector</members>
+        <members>QueryStringConnectorTest</members>
         <members>QueryStringResponderController</members>
         <members>QueryStringResponderControllerTest</members>
         <members>QueryStringUrlRewriter</members>
@@ -13,8 +15,18 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>QueryStringConnectorHelp</members>
         <members>QueryStringResponder</members>
         <name>ApexPage</name>
+    </types>
+    <types>
+        <members>QueryStringEndpoint__c.Path__c</members>
+        <members>QueryStringEndpoint__c.Response__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>QueryStringEndpoint__c</members>
+        <name>CustomObject</name>
     </types>
     <types>
         <members>Handle</members>
