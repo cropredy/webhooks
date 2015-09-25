@@ -4,9 +4,15 @@
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <namespacePrefix>webhook</namespacePrefix>
     <types>
+        <members>QueryStringResponderController</members>
+        <members>QueryStringResponderControllerTest</members>
         <members>QueryStringUrlRewriter</members>
         <members>QueryStringUrlRewriterTest</members>
         <name>ApexClass</name>
+    </types>
+    <types>
+        <members>QueryStringResponder</members>
+        <name>ApexPage</name>
     </types>
     <version>34.0</version>
 </Package>

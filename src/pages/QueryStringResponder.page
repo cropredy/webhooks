@@ -1,0 +1,8 @@
+<!--
+ ! Webhooks
+ ! @see https://github.com/bigassforce/webhooks
+ ! @author <webmaster@bigass.engineering>
+ ! 
+ ! Responder page that handles the synchronous response
+ !-->
+<apex:page contentType="text/plain" controller="QueryStringResponderController" action="{!doHandle}">{!Response}</apex:page>
