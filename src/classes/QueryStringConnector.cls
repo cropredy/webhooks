@@ -31,6 +31,9 @@ global class QueryStringConnector extends Abstract.Service {
         //documentation on configuring and consuming the service
         String HelpUrl = Page.QueryStringConnectorHelp.getUrl();
         
+        //friendly description of the input event parameters
+        Map<String,String> Inputs = new Map<String,String>{};
+        
         //friendly descriptions of the output event parameters
         Map<String,String> Outputs = new Map<String,String>{
             'webhook:Path' => 'STRING of the webhook path.',

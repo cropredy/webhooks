@@ -15,7 +15,9 @@ public class QueryStringUrlRewriter implements Site.UrlRewriter {
     }
     
     public List<PageReference> generateUrlFor(List<PageReference> pages) {
-        return pages;
+        List<PageReference> urls = new List<PageReference>();
+        for (PageReference pr : pages) urls.add(new PageReference(pr.getUrl()));
+        return urls;
     }
     
 }

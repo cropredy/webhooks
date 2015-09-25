@@ -19,4 +19,18 @@
         System.assertEquals(expectedSize, actualSize, 'Wrong size.');
     }
     
+    static testmethod void testVolumes() {
+        //arrange
+        QueryStringConnector.Summary summary = new QueryStringConnector.Summary();
+        Abstract.Service impl = new QueryStringConnector();
+        Integer i = 0;
+        
+        //act
+        for (i = 0; i < 200; i++) impl.handle(new Map<String,Object>());
+        
+        //assert
+        System.assertEquals(200, i, 'Wrong limits.');
+    }
+    
+    
 }
