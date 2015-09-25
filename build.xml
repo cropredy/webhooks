@@ -10,7 +10,7 @@
             password="${de.password}"
             serverurl="${de.serverurl}"
             retrieveTarget="src"
-            packageNames="Service Bus Webhooks"
+            packageNames="Webhooks"
         />
     </target>
     
