@@ -3,6 +3,7 @@
     <fullName>Service Bus Webhooks</fullName>
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <namespacePrefix>webhook</namespacePrefix>
+    <postInstallClass>PostInstallHandler</postInstallClass>
     <types>
         <members>PostInstallHandler</members>
         <members>PostInstallHandlerTest</members>
