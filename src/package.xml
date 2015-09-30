@@ -8,26 +8,24 @@
     <types>
         <members>PostInstallHandler</members>
         <members>PostInstallHandlerTest</members>
-        <members>QueryStringConnector</members>
-        <members>QueryStringConnectorTest</members>
-        <members>QueryStringResponderController</members>
-        <members>QueryStringResponderControllerTest</members>
-        <members>QueryStringUrlRewriter</members>
-        <members>QueryStringUrlRewriterTest</members>
+        <members>RestfulConnector</members>
+        <members>RestfulConnectorTest</members>
+        <members>RestfulResponder</members>
+        <members>RestfulResponderTest</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>QueryStringConnectorHelp</members>
-        <members>QueryStringResponder</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>QueryStringEndpoint__c.Path__c</members>
-        <members>QueryStringEndpoint__c.Response__c</members>
+        <members>RestfulEndpoint__c.HttpDelete__c</members>
+        <members>RestfulEndpoint__c.HttpGet__c</members>
+        <members>RestfulEndpoint__c.HttpPatch__c</members>
+        <members>RestfulEndpoint__c.HttpPost__c</members>
+        <members>RestfulEndpoint__c.HttpPut__c</members>
+        <members>RestfulEndpoint__c.Path__c</members>
+        <members>RestfulEndpoint__c.Response__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>QueryStringEndpoint__c</members>
+        <members>RestfulEndpoint__c</members>
         <name>CustomObject</name>
     </types>
     <types>

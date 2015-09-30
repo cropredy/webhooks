@@ -9,39 +9,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>QueryStringConnector</apexClass>
+        <apexClass>RestfulConnector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>QueryStringConnectorTest</apexClass>
+        <apexClass>RestfulConnectorTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>QueryStringResponderController</apexClass>
-        <enabled>false</enabled>
+        <apexClass>RestfulResponder</apexClass>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>QueryStringResponderControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>QueryStringUrlRewriter</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>QueryStringUrlRewriterTest</apexClass>
+        <apexClass>RestfulResponderTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <description>Allows a Site Guest User to receive and respond to webhooks</description>
     <label>Handle Webhooks</label>
-    <pageAccesses>
-        <apexPage>QueryStringConnectorHelp</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>QueryStringResponder</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
     <userPermissions>
         <enabled>false</enabled>
         <name>ActivateContract</name>

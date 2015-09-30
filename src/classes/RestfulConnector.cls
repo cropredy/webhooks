@@ -3,7 +3,7 @@
  * @see https://github.com/bigassforce/webhooks
  * @author <webmaster@bigass.engineering>
  */
-global class QueryStringConnector extends Abstract.Service {
+global class RestfulConnector extends Abstract.Service {
     
     global class Summary extends Abstract.Service.Summary {
         
@@ -11,13 +11,13 @@ global class QueryStringConnector extends Abstract.Service {
         String Tag = 'Webhooks';
         
         //user friendly name
-        String Label = 'Query String Webhook';
+        String Label = 'Restful Webhook';
         
         //silk library icon displayed on each step
         String Icon = 'lightning';
         
         //user friendly explanation of what this service does
-        String Description = 'Handles HTTP post with URL parameters and spawns event.';
+        String Description = 'Handles HTTP method with raw body and spawns event.';
         
         //handles this many events in one execution context
         Integer Limits = 200;
@@ -26,10 +26,7 @@ global class QueryStringConnector extends Abstract.Service {
         String Cardinality = 'One';
         
         //custom object API name used for step specific configuration
-        String StepConfig = QueryStringEndpoint__c.class.getName();
-        
-        //documentation on configuring and consuming the service
-        String HelpUrl = Page.QueryStringConnectorHelp.getUrl();
+        String StepConfig = RestfulEndpoint__c.class.getName();
         
         //friendly description of the input event parameters
         Map<String,String> Inputs = new Map<String,String>{};

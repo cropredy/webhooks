@@ -3,14 +3,14 @@
  * @see https://github.com/bigassforce/webhooks
  * @author <webmaster@bigass.engineering>
  */
-@IsTest class QueryStringConnectorTest {
+@IsTest class RestfulConnectorTest {
     
     static testmethod void testPassThroughEvent() {
         //arrange
         Map<String,Object> inputEvent = new Map<String,Object>();
         
         //act
-        Abstract.Service impl = new QueryStringConnector();
+        Abstract.Service impl = new RestfulConnector();
         List<Map<String,Object>> outputevents = impl.handle(inputEvent);
         
         //assert
@@ -21,8 +21,8 @@
     
     static testmethod void testVolumes() {
         //arrange
-        QueryStringConnector.Summary summary = new QueryStringConnector.Summary();
-        Abstract.Service impl = new QueryStringConnector();
+        RestfulConnector.Summary summary = new RestfulConnector.Summary();
+        Abstract.Service impl = new RestfulConnector();
         Integer i = 0;
         
         //act
