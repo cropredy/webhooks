@@ -46,3 +46,7 @@ On any service instance, click Configure to expose:
 - Custom response
 
 ![webhook6-crop](https://cloud.githubusercontent.com/assets/1878631/10217930/f962caa0-682a-11e5-9054-8c2dbefd4f1c.png)
+
+#### Video walkthrough:
+
+[![video-frame](https://cloud.githubusercontent.com/assets/1878631/10218330/f2e0618a-682d-11e5-8acb-03eab5770b4e.png)](https://vimeo.com/141029160)
