@@ -12,7 +12,7 @@
      * Locates the endpoint defined by any service instance or "step"
      * and dispatches an asynchronous event to the "config" as a destination
      */
-    @HttpGet @HttpPost @HttpPut @HttpPatch @HttpDelete static global void handle() {
+    @TestVisible static void handle() {
         RestContext.Response.addHeader('Content-Type', 'text/plain');
         String path = RestContext.Request.RequestUri.substringAfter('/webhook/responder');
         String method = RestContext.Request.HttpMethod;
@@ -43,9 +43,15 @@
             Event.put('webhook:' + key, RestContext.Request.Params.get(key));
         }
         
-        Process.Plugin job = (Process.Plugin)Type.forName('ServiceBus.Job').newInstance();
-        job.invoke(new Process.PluginRequest(Event));
+        Process.Plugin enqueue = (Process.Plugin)Type.forName('Services.Enqueue').newInstance();
+        enqueue.invoke(new Process.PluginRequest(Event));
         if (Config.Response__c != null) RestContext.Response.ResponseBody = Blob.valueOf(Config.Response__c);
     }
+    
+    @HttpGet static global void httpGet() {handle();}
+    @HttpPut static global void httpPut() {handle();}
+    @HttpPost static global void httpPost() {handle();}
+    @HttpPatch static global void httpPatch() {handle();}
+    @HttpDelete static global void httpDelete() {handle();}
     
 }

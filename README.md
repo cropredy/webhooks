@@ -1,7 +1,7 @@
 # Webhooks for the rest of us
 
-This is a salesforce connector that uses the [Apex Microservices Open Specification (AMOS)](https://github.com/bigassforce/amos), particularly:
-- the [Service Summary](https://github.com/bigassforce/webhooks/blob/master/src/classes/RestfulConnector.cls#L8-L39) inner class
+This is a salesforce connector that uses the [Open Apex Service Specification (OASIS)](https://github.com/bigassforce/oasis), particularly:
+- the [Service Definition](https://github.com/bigassforce/webhooks/blob/master/src/classes/RestfulConnector.cls#L8-L39) inner class
 - package agnostic [event parameters](https://github.com/bigassforce/webhooks/blob/master/src/classes/RestfulResponder.cls#L34-L43)
 - instance configuration via [custom setting](https://github.com/bigassforce/webhooks/blob/master/src/objects/RestfulEndpoint__c.object)
 
@@ -26,14 +26,14 @@ It separates the three concerns: the synchronous responder that says "got it!"; 
 
 #### Why not just hard code the webhook action?
 
-Rolling that Apex webhook probably won't be the first or the last one we ever build. We separate the event from the action by using AMOS with a service container. And the action gets free transaction management, free error handling, and context independence. Code less like the left, and more like the right:
+Rolling that Apex webhook probably won't be the first or the last one we ever build. We separate the event from the action by using a [service container](https://github.com/bigassforce/oasis). And the action gets free transaction management, free error handling, and context independence. Code less like the left, and more like the right:
 
 ![webhook3_4](https://cloud.githubusercontent.com/assets/1878631/10217469/c80f17d6-6827-11e5-8421-fcb0ce915e58.png)
 
 #### How to arrange the services?
 
 - First is your webhook
-- Second is your action (using [AMOS](https://github.com/bigassforce/amos))
+- Second is your action (using [OASIS](https://github.com/bigassforce/oasis))
 
 ![webhook5-crop](https://cloud.githubusercontent.com/assets/1878631/10217929/f7a5b98e-682a-11e5-88aa-9d669962e447.png)
 

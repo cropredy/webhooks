@@ -3,9 +3,9 @@
  * @see https://github.com/bigassforce/webhooks
  * @author <webmaster@bigass.engineering>
  */
-global class RestfulConnector extends Abstract.Service {
+global class RestfulConnector {
     
-    global class Summary extends Abstract.Service.Summary {
+    global class Definition {
         
         //groups services together
         String Tag = 'Webhooks';

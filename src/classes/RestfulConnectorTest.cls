@@ -10,8 +10,8 @@
         Map<String,Object> inputEvent = new Map<String,Object>();
         
         //act
-        Abstract.Service impl = new RestfulConnector();
-        List<Map<String,Object>> outputevents = impl.handle(inputEvent);
+        RestfulConnector = new RestfulConnector();
+        List<Map<String,Object>> outputevents = impl.execute(inputEvent);
         
         //assert
         Integer expectedSize = 1;
@@ -21,12 +21,12 @@
     
     static testmethod void testVolumes() {
         //arrange
-        RestfulConnector.Summary summary = new RestfulConnector.Summary();
-        Abstract.Service impl = new RestfulConnector();
+        RestfulConnector.Definition definition = new RestfulConnector.Definition();
+        RestfulConnector impl = new RestfulConnector();
         Integer i = 0;
         
         //act
-        for (i = 0; i < 200; i++) impl.handle(new Map<String,Object>());
+        for (i = 0; i < 200; i++) impl.execute(new Map<String,Object>());
         
         //assert
         System.assertEquals(200, i, 'Wrong limits.');
