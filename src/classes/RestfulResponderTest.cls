@@ -55,6 +55,7 @@
         RestContext.Request = new RestRequest();
         RestContext.Request.HttpMethod = 'POST';
         RestContext.Request.RequestUri = '/webhook/responder/test';
+        RestContext.Request.RequestBody = Blob.valueOf('{"herp":"derp"}');
         
         //act
         RestContext.Response = new RestResponse();
@@ -68,6 +69,10 @@
         String expectedPath = '/test';
         String actualPath = (String)RestfulResponder.Event.get('webhook:Path');
         System.assertEquals(expectedPath, actualPath, 'Wrong path.');
+        
+        String expectedRequestBody = '{"herp":"derp"}';
+        String actualRequestBody = ((Blob)RestfulResponder.Event.get('webhook:RequestBody')).toString();
+        System.assertEquals(expectedRequestBody, actualRequestBody, 'Wrong request body.');
     }
     
 }

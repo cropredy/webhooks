@@ -36,6 +36,7 @@
         Event.put('ToConfig', Config.Id);
         Event.put('webhook:Path', path);
         Event.put('webhook:Headers', RestContext.Request.Headers);
+        Event.put('webhook:RequestBody', RestContext.Request.RequestBody);
         
         for (String key : RestContext.Request.Params.keySet()) {
             //avail request parameters with namespace prefix
