@@ -3,7 +3,6 @@
     <fullName>Webhooks</fullName>
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <description>Webhook handler suite</description>
-    <namespacePrefix>webhook</namespacePrefix>
     <postInstallClass>PostInstallHandler</postInstallClass>
     <types>
         <members>PostInstallHandler</members>
