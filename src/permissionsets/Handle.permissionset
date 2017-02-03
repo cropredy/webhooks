@@ -120,10 +120,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
-        <name>DistributeFromPersWksp</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
         <name>EditBillingInfo</name>
     </userPermissions>
     <userPermissions>
